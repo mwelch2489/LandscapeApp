@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.matt.myfirstapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activityEnterCustomerInfo" />
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".TreeActivity" />
+        <activity android:name=".ShrubActivity" />
+        <activity android:name=".GrassActivity" />
+        <activity android:name=".HardgoodsActivity" />
+        <activity android:name=".LaborActivity" />
+        <activity android:name=".FlowersActivity" />
+        <activity android:name=".EndActivity" />
+        <activity android:name=".treesActivity1" />
+        <activity android:name=".ShrubLayoutActivity" />
+        <activity android:name=".LaborLayoutActivity" />
+        <activity android:name=".GrassActivityAdapter" />
+        <activity android:name=".FlowerActivityAdapter" />
+        <activity android:name=".HardgoodsActivityAdapter"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,65 @@
+<resources>
+
+    <string name="app_name">Landscape Estimator App</string>
+
+    <string-array name="trees">
+        <item>European Aspen</item>
+        <item>Populus Nigra</item>
+        <item>Populus Alba</item>
+        <item>Populus sect. Algerios</item>
+        <item>Populus Alba</item>
+        <item>Populus Simonii</item>
+        <item>Populus Angustfolia</item>
+        <item>Populus Lasiocarpa</item>
+        <item>Laural Leaf Poplar</item>
+    </string-array>
+
+    <string-array name="shrubs">
+        <item>Barberry</item>
+        <item>Rose of Sharon</item>
+        <item>Oakleaf Hydrangeo</item>
+        <item>Box</item>
+        <item>Weigela</item>
+        <item>Holly</item>
+        <item>Butterfly Bush</item>
+        <item>Oleander</item>
+    </string-array>
+
+    <string-array name="flowers">
+        <item>Annemone</item>
+        <item>Daffodil</item>
+        <item>Irises</item>
+        <item>Carnation</item>
+        <item>Hyacinth</item>
+        <item>Dahila</item>
+        <item>Larkspur Bush</item>
+        <item>Daisy</item>
+        <item>Sunflower</item>
+    </string-array>
+
+    <string-array name="grass">
+        <item>Tall Fescue</item>
+        <item>Lawngrass</item>
+        <item>Kentucky Bluegrass</item>
+        <item>Lolium Perenne</item>
+        <item>Bentgrass</item>
+        <item>Perrenial Ryegrass</item>
+    </string-array>
+
+    <string-array name="hardgoods">
+        <item>Mulch Black</item>
+        <item>Mulch Brown</item>
+        <item>Mulch Red</item>
+        <item>Stones Small</item>
+        <item>Stones Medium</item>
+        <item>Stones Large</item>
+        <item>Charcoal Black</item>
+        <item>Charcoal Red</item>
+    </string-array>
+
+    <string-array name="labor">
+        <item>Laborers</item>
+        <item>Hours</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ShrubsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:text="TextView"
+        android:textSize="24dp"
+        tools:text="Shrubs" />
+
+    <TextView
+        android:id="@+id/CountTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/minusBtn"
+        android:layout_alignBottom="@+id/minusBtn"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/minusBtn"
+        android:layout_toStartOf="@+id/minusBtn"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        tools:text="Count" />
+
+    <Button
+        android:id="@+id/plusBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ShrubsTxt"
+        android:layout_alignStart="@+id/ShrubsTxt"
+        android:layout_below="@+id/ShrubsTxt"
+        android:layout_marginTop="34dp"
+        android:text="+"
+        tools:text="+" />
+
+    <Button
+        android:id="@+id/minusBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/plusBtn"
+        android:layout_alignBottom="@+id/plusBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="87dp"
+        android:layout_marginRight="87dp"
+        android:text="-"
+        tools:text="-" />
+
+</RelativeLayout>
