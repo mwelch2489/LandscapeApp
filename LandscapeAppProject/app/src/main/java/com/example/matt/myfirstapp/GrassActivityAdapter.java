@@ -50,7 +50,7 @@ public class GrassActivityAdapter extends BaseAdapter {
         String Grass = grass[i];
         grassTxtVw.setText(Grass);
         int setValue = 0;
-        Settings = Ctx.getSharedPreferences("GrassSaved", 0);
+        Settings = Ctx.getSharedPreferences("SavedItems", 0);
         if(Settings.contains(Grass)) {
             setValue = Settings.getInt(Grass, 0);
         }
@@ -69,7 +69,7 @@ public class GrassActivityAdapter extends BaseAdapter {
                 TextView GrassTxtVw = (TextView) p.findViewById(R.id.GrassTxt);
                 Integer value = Integer.parseInt(countTxtVw.getText().toString());
                 value++;
-                Settings = Ctx.getSharedPreferences("GrassSaved", 0);
+                Settings = Ctx.getSharedPreferences("SavedItems", 0);
                 SharedPreferences.Editor edit = Settings.edit();
                 edit.putInt(GrassTxtVw.getText().toString(), value);
                 edit.apply();
@@ -87,7 +87,7 @@ public class GrassActivityAdapter extends BaseAdapter {
 
                     TextView GrassTxtVw = (TextView) p.findViewById(R.id.GrassTxt);
                     value--;
-                    Settings = Ctx.getSharedPreferences("GrassSaved", 0);
+                    Settings = Ctx.getSharedPreferences("SavedItems", 0);
                     SharedPreferences.Editor edit = Settings.edit();
                     edit.putInt(GrassTxtVw.getText().toString(), value);
                     edit.apply();

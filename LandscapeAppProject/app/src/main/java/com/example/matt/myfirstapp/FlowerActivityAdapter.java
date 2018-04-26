@@ -50,7 +50,7 @@ public class FlowerActivityAdapter extends BaseAdapter {
         String Flowers = flowers[i];
         flowerTxtVw.setText(Flowers);
         int setValue = 0;
-        Settings = Ctx.getSharedPreferences("FlowersSaved", 0);
+        Settings = Ctx.getSharedPreferences("SavedItems", 0);
         if(Settings.contains(Flowers)) {
             setValue = Settings.getInt(Flowers, 0);
         }
@@ -69,7 +69,7 @@ public class FlowerActivityAdapter extends BaseAdapter {
                 TextView FlowerTxtVw = (TextView) p.findViewById(R.id.FlowerTxt);
                 Integer value = Integer.parseInt(countTxtVw.getText().toString());
                 value++;
-                Settings = Ctx.getSharedPreferences("FlowersSaved", 0);
+                Settings = Ctx.getSharedPreferences("SavedItems", 0);
                 SharedPreferences.Editor edit = Settings.edit();
                 edit.putInt(FlowerTxtVw.getText().toString(), value);
                 edit.apply();
@@ -86,7 +86,7 @@ public class FlowerActivityAdapter extends BaseAdapter {
                     View p = (View) view.getParent();
                     TextView FlowerTxtVw = (TextView) p.findViewById(R.id.FlowerTxt);
                     value--;
-                    Settings = Ctx.getSharedPreferences("FlowersSaved", 0);
+                    Settings = Ctx.getSharedPreferences("SavedItems", 0);
                     SharedPreferences.Editor edit = Settings.edit();
                     edit.putInt(FlowerTxtVw.getText().toString(), value);
                     edit.apply();

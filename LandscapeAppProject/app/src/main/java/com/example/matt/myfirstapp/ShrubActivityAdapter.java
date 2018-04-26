@@ -48,7 +48,7 @@ public class ShrubActivityAdapter extends BaseAdapter {
         String Shrub = shrubs[i];
         shrubTxtVw.setText(Shrub);
         int setValue = 0;
-        Settings = Ctx.getSharedPreferences("ShrubsSaved", 0);
+        Settings = Ctx.getSharedPreferences("SavedItems", 0);
         if(Settings.contains(Shrub)) {
             setValue = Settings.getInt(Shrub, 0);
         }
@@ -67,7 +67,7 @@ public class ShrubActivityAdapter extends BaseAdapter {
                 TextView shrubTxtVw = (TextView) p.findViewById(R.id.ShrubsTxt);
                 Integer value = Integer.parseInt(countTxtVw.getText().toString());
                 value++;
-                Settings = Ctx.getSharedPreferences("ShrubsSaved", 0);
+                Settings = Ctx.getSharedPreferences("SavedItems", 0);
                 SharedPreferences.Editor edit = Settings.edit();
                 edit.putInt(shrubTxtVw.getText().toString(), value);
                 edit.apply();
@@ -85,7 +85,7 @@ public class ShrubActivityAdapter extends BaseAdapter {
 
                     TextView shrubTxtVw = (TextView) p.findViewById(R.id.ShrubsTxt);
                     value--;
-                    Settings = Ctx.getSharedPreferences("ShrubsSaved", 0);
+                    Settings = Ctx.getSharedPreferences("SavedItems", 0);
                     SharedPreferences.Editor edit = Settings.edit();
                     edit.putInt(shrubTxtVw.getText().toString(), value);
                     edit.apply();

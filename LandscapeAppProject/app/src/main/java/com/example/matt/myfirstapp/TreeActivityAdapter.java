@@ -46,7 +46,7 @@ public class TreeActivityAdapter extends BaseAdapter {
         String Tree = trees[i];
         treesTxtVw.setText(Tree);
         int setValue = 0;
-        Settings = Ctx.getSharedPreferences("TreesSaved", 0);
+        Settings = Ctx.getSharedPreferences("SavedItems", 0);
         if(Settings.contains(Tree)) {
             setValue = Settings.getInt(Tree, 0);
         }
@@ -65,7 +65,7 @@ public class TreeActivityAdapter extends BaseAdapter {
             TextView treesTxtVw = (TextView) p.findViewById(R.id.TreesTxt);
             Integer value = Integer.parseInt(countTxtVw.getText().toString());
             value++;
-            Settings = Ctx.getSharedPreferences("TreesSaved", 0);
+            Settings = Ctx.getSharedPreferences("SavedItems", 0);
             SharedPreferences.Editor edit = Settings.edit();
                 edit.putInt(treesTxtVw.getText().toString(), value);
                 edit.apply();
@@ -83,7 +83,7 @@ public class TreeActivityAdapter extends BaseAdapter {
 
                     TextView treesTxtVw = (TextView) p.findViewById(R.id.TreesTxt);
                     value--;
-                    Settings = Ctx.getSharedPreferences("TreesSaved", 0);
+                    Settings = Ctx.getSharedPreferences("SavedItems", 0);
                     SharedPreferences.Editor edit = Settings.edit();
                     edit.putInt(treesTxtVw.getText().toString(), value);
                     edit.apply();

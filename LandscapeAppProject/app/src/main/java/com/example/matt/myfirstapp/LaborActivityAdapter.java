@@ -50,7 +50,7 @@ public class LaborActivityAdapter extends BaseAdapter {
         String Labor = labor[i];
         laborTxtVw.setText(Labor);
         int setValue = 0;
-        Settings = Ctx.getSharedPreferences("LaborSaved", 0);
+        Settings = Ctx.getSharedPreferences("SavedItems", 0);
         if(Settings.contains(Labor)) {
             setValue = Settings.getInt(Labor, 0);
         }
@@ -68,7 +68,7 @@ public class LaborActivityAdapter extends BaseAdapter {
                 TextView laborTxtVw = (TextView) p.findViewById(R.id.LaborTxt);
                 Integer value = Integer.parseInt(countTxtVw.getText().toString());
                 value++;
-                Settings = Ctx.getSharedPreferences("LaborSaved", 0);
+                Settings = Ctx.getSharedPreferences("SavedItems", 0);
                 SharedPreferences.Editor edit = Settings.edit();
                 edit.putInt(laborTxtVw.getText().toString(), value);
                 edit.apply();
@@ -86,7 +86,7 @@ public class LaborActivityAdapter extends BaseAdapter {
 
                         TextView laborTxtVw = (TextView) p.findViewById(R.id.LaborTxt);
                         value--;
-                        Settings = Ctx.getSharedPreferences("LaborSaved", 0);
+                        Settings = Ctx.getSharedPreferences("SavedItems", 0);
                         SharedPreferences.Editor edit = Settings.edit();
                         edit.putInt(laborTxtVw.getText().toString(), value);
                         edit.apply();

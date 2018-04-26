@@ -51,7 +51,7 @@ public class HardgoodsActivityAdapter extends BaseAdapter {
 
         hardgoodsTxtVw.setText(Hardgoods);
         int setValue = 0;
-        Settings = Ctx.getSharedPreferences("HardgoodsSaved", 0);
+        Settings = Ctx.getSharedPreferences("SavedItems", 0);
         if(Settings.contains(Hardgoods)) {
             setValue = Settings.getInt(Hardgoods, 0);
         }
@@ -70,7 +70,7 @@ public class HardgoodsActivityAdapter extends BaseAdapter {
                 TextView hardgoodsTxtVw = (TextView) p.findViewById(R.id.HardgoodsTxt);
                 Integer value = Integer.parseInt(countTxtVw.getText().toString());
                 value++;
-                Settings = Ctx.getSharedPreferences("HardgoodsSaved", 0);
+                Settings = Ctx.getSharedPreferences("SavedItems", 0);
                 SharedPreferences.Editor edit = Settings.edit();
                 edit.putInt(hardgoodsTxtVw.getText().toString(), value);
                 edit.apply();
@@ -88,7 +88,7 @@ public class HardgoodsActivityAdapter extends BaseAdapter {
 
                     TextView hardgoodsTxtVw = (TextView) p.findViewById(R.id.HardgoodsTxt);
                     value--;
-                    Settings = Ctx.getSharedPreferences("HardgoodsSaved", 0);
+                    Settings = Ctx.getSharedPreferences("SavedItems", 0);
                     SharedPreferences.Editor edit = Settings.edit();
                     edit.putInt(hardgoodsTxtVw.getText().toString(), value);
                     edit.apply();

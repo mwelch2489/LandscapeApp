@@ -30,7 +30,8 @@
         <activity android:name=".LaborLayoutActivity" />
         <activity android:name=".GrassActivityAdapter" />
         <activity android:name=".FlowerActivityAdapter" />
-        <activity android:name=".HardgoodsActivityAdapter"></activity>
+        <activity android:name=".HardgoodsActivityAdapter" />
+        <activity android:name=".EndLayoutActivity"></activity>
     </application>
 
 </manifest>
