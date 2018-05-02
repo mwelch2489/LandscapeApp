@@ -37,22 +37,27 @@ public class EndActivityAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        View v = inflate.inflate(R.layout.activity_end_layout, null);
-        TextView EndTxtVw = (TextView) v.findViewById(R.id.EstimateItemTxt);
-        final TextView countTxtVw = (TextView) v.findViewById(R.id.EstimateCountTxt);
+          View v = inflate.inflate(R.layout.activity_end_layout, null);
+//        TextView EndTxtVw = (TextView) v.findViewById(R.id.EstimateItemTxt);
+//        final TextView countTxtVw = (TextView) v.findViewById(R.id.EstimateCountTxt);
 
-        String Item = items[i];
-        EndTxtVw.setText(Item);
-        int setValue = 0;
         Settings = Ctx.getSharedPreferences("SavedItems", 0);
-        if(Settings.contains(Item)) {
-            setValue = Settings.getInt(Item, 0);
-        }
-        SharedPreferences.Editor edit = Settings.edit();
-        countTxtVw.setText(String.valueOf(setValue));
+        String Item = items[i];
+        int setValue = 0;
+        if (Settings.contains(Item)) {
+            if (Settings.getInt(Item, 0) > 0) {
 
-        edit.putInt(Item, setValue);
-        edit.commit();
+                TextView EndTxtVw = (TextView) v.findViewById(R.id.EstimateItemTxt);
+                final TextView countTxtVw = (TextView) v.findViewById(R.id.EstimateCountTxt);
+                setValue = Settings.getInt(Item, 0);
+                EndTxtVw.setText(Item);
+                SharedPreferences.Editor edit = Settings.edit();
+                countTxtVw.setText(String.valueOf(setValue));
+
+                edit.putInt(Item, setValue);
+                edit.commit();
+            }
+        }
 
         return v;
     }
