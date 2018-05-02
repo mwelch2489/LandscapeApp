@@ -19,12 +19,11 @@ public class EndActivity extends AppCompatActivity {
     String[] grass;
     String[] shrubs;
     String[] labor;
-    String[] items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tree);
+        setContentView(R.layout.activity_end);
 
         Resources res = getResources();
         trees = res.getStringArray(R.array.trees);
