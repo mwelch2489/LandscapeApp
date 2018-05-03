@@ -12,9 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="29dp"
         android:layout_marginStart="29dp"
-        android:text="TextView"
-        android:textSize="24dp"
-        tools:text="Tree" />
+        android:textSize="24dp" />
 
     <TextView
         android:id="@+id/EstimateCountTxt"
@@ -26,9 +24,7 @@
         android:layout_marginRight="20dp"
         android:layout_toLeftOf="@+id/minusBtn"
         android:layout_toStartOf="@+id/minusBtn"
-        android:text="TextView"
         android:textAlignment="center"
-        android:textSize="18sp"
-        tools:text="Count" />
+        android:textSize="18sp" />
 
 </RelativeLayout>

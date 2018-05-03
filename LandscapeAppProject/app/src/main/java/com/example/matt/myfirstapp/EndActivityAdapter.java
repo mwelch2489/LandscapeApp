@@ -44,8 +44,8 @@ public class EndActivityAdapter extends BaseAdapter {
         Settings = Ctx.getSharedPreferences("SavedItems", 0);
         String Item = items[i];
         int setValue = 0;
-        if (Settings.contains(Item)) {
-            if (Settings.getInt(Item, 0) > 0) {
+        if (Settings.getInt(Item, 0) > 0) {
+            if (Settings.contains(Item)) {
 
                 TextView EndTxtVw = (TextView) v.findViewById(R.id.EstimateItemTxt);
                 final TextView countTxtVw = (TextView) v.findViewById(R.id.EstimateCountTxt);

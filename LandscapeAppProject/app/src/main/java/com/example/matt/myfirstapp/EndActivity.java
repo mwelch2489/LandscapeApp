@@ -1,5 +1,7 @@
 package com.example.matt.myfirstapp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +21,8 @@ public class EndActivity extends AppCompatActivity {
     String[] grass;
     String[] shrubs;
     String[] labor;
+    SharedPreferences Settings;
+    Context Ctx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,10 @@ public class EndActivity extends AppCompatActivity {
 
             }
         });
+//        SharedPreferences settings = getSharedPreferences("Saved Items", Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = settings.edit();
+//        editor.clear();
+//        editor.commit();
     }
 
 }
